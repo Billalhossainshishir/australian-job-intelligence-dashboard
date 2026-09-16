@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Australian technology job intelligence portfolio demo with skill demand analytics and transparent CV technical-skill coverage." />
+  <title>Australian Job Intelligence Dashboard</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav shell">
+      <div class="brand"><span class="brand-mark">AJ</span><span>Job Intelligence</span></div>
+      <div class="nav-links">
+        <a href="#market">Market</a>
+        <a href="#compare">CV Compare</a>
+        <a href="https://github.com/Billalhossainshishir/australian-job-intelligence-dashboard" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </nav>
+    <div class="shell hero-grid">
+      <div>
+        <div class="eyebrow">PORTFOLIO PROJECT 05 · AUSTRALIA</div>
+        <h1>Turn technology job listings into <span>clear skill intelligence.</span></h1>
+        <p class="hero-copy">Explore a curated Australian technology-job dataset, filter the market, inspect skill demand and compare a sample CV against a selected role using transparent dictionary-based NLP.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#market">Explore Job Market</a>
+          <a class="button secondary" href="#compare">Compare Sample CV</a>
+        </div>
+        <p class="disclaimer"><strong>Demo data:</strong> all listings are curated sample records for portfolio demonstration. They are not live vacancies or hiring probabilities.</p>
+      </div>
+      <div class="hero-panel">
+        <div class="flow-step"><span>01</span><div><strong>Filter jobs</strong><small>City, state, role, level and skill</small></div></div>
+        <div class="flow-step"><span>02</span><div><strong>Read demand</strong><small>Skills, locations, cloud and languages</small></div></div>
+        <div class="flow-step"><span>03</span><div><strong>Select a role</strong><small>Inspect requested technical skills</small></div></div>
+        <div class="flow-step"><span>04</span><div><strong>Compare a CV</strong><small>Matched, missing and coverage</small></div></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="shell stat-strip" aria-label="Dataset summary">
+      <article><small>Demo listings</small><strong id="statJobs">—</strong></article>
+      <article><small>Locations</small><strong id="statLocations">—</strong></article>
+      <article><small>Tracked skills</small><strong id="statSkills">—</strong></article>
+      <article><small>Graduate roles</small><strong id="statGraduate">—</strong></article>
+    </section>
+
+    <section id="market" class="section shell">
+      <div class="section-heading">
+        <div><div class="eyebrow dark">MARKET EXPLORER</div><h2>Explore the sample market</h2></div>
+        <button id="resetFilters" class="text-button">Reset filters</button>
+      </div>
+
+      <div class="filters card">
+        <label>City<select id="filterCity"><option value="">All cities</option></select></label>
+        <label>State<select id="filterState"><option value="">All states</option></select></label>
+        <label>Role type<select id="filterRole"><option value="">All role types</option></select></label>
+        <label>Experience<select id="filterLevel"><option value="">All levels</option></select></label>
+        <label>Skill<select id="filterSkill"><option value="">All skills</option></select></label>
+        <label>Search<input id="filterSearch" type="search" placeholder="e.g. data, cloud, support" /></label>
+      </div>
+
+      <div class="analytics-grid">
+        <article class="card chart-card"><div class="card-title"><h3>Top technical skills</h3><span id="filteredCount">— jobs</span></div><canvas id="skillsChart"></canvas></article>
+        <article class="card chart-card"><div class="card-title"><h3>Jobs by city</h3><span>filtered</span></div><canvas id="citiesChart"></canvas></article>
+        <article class="card chart-card"><div class="card-title"><h3>Cloud platform demand</h3><span>filtered</span></div><canvas id="cloudChart"></canvas></article>
+        <article class="card chart-card"><div class="card-title"><h3>Programming & data languages</h3><span>filtered</span></div><canvas id="languageChart"></canvas></article>
+      </div>
+
+      <div class="jobs-layout">
+        <div class="card jobs-card">
+          <div class="card-title"><h3>Job records</h3><span>Select one to analyse</span></div>
+          <div id="jobList" class="job-list"></div>
+        </div>
+        <aside class="card selected-card" id="selectedPanel">
+          <div class="empty-state">Select a job record to inspect its requested technical skills.</div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="compare" class="section compare-section">
+      <div class="shell">
+        <div class="section-heading light">
+          <div><div class="eyebrow">TECHNICAL SKILL COVERAGE</div><h2>Compare a CV with the selected role</h2></div>
+          <button id="loadSampleCv" class="button secondary compact">Load Sample CV</button>
+        </div>
+        <div class="compare-grid">
+          <div class="card dark-card">
+            <label class="textarea-label">CV text<textarea id="cvText" rows="12" placeholder="Paste CV text here or load the sample CV..."></textarea></label>
+            <p class="helper">Only technical skills from the transparent skill dictionary are compared. This is not a hiring score or probability.</p>
+            <button id="compareBtn" class="button primary full">Compare Technical Skills</button>
+          </div>
+          <div id="comparisonResult" class="card dark-card result-card">
+            <div class="empty-state dark-empty">Select a role, add CV text, then run the comparison.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell">
+      <div class="section-heading"><div><div class="eyebrow dark">ENGINEERING PROOF</div><h2>What the full repository demonstrates</h2></div></div>
+      <div class="proof-grid">
+        <article class="proof"><span>API</span><h3>FastAPI analytics</h3><p>Filterable jobs, locations, skills, cloud/language analytics and CV comparison endpoints.</p></article>
+        <article class="proof"><span>DB</span><h3>PostgreSQL model</h3><p>Normalised job and job-skill tables with Docker Compose for reproducible local deployment.</p></article>
+        <article class="proof"><span>NLP</span><h3>Explainable extraction</h3><p>Canonical skill dictionary maps variants such as Python3, PowerBI and k8s to standard skills.</p></article>
+        <article class="proof"><span>QA</span><h3>Automated testing</h3><p>Pytest covers extraction, coverage logic and API behaviour with GitHub Actions CI.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="shell footer-inner"><span>Built by Billal Hossain Shishir · Portfolio Project 05</span><span>Static GitHub Pages demo · Full backend in repository</span></div></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

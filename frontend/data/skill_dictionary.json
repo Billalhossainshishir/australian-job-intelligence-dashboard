@@ -1,0 +1,135 @@
+{
+  "AWS": [
+    "aws",
+    "amazon web services"
+  ],
+  "Artificial Intelligence": [
+    "artificial intelligence",
+    "generative ai",
+    "genai",
+    "ai"
+  ],
+  "Azure": [
+    "azure",
+    "microsoft azure"
+  ],
+  "C#": [
+    "c#",
+    "c sharp"
+  ],
+  "C++": [
+    "c++",
+    "cpp"
+  ],
+  "CI/CD": [
+    "ci/cd",
+    "continuous integration"
+  ],
+  "Cybersecurity": [
+    "cybersecurity",
+    "cyber security"
+  ],
+  "Django": [
+    "django"
+  ],
+  "Docker": [
+    "docker",
+    "containerisation"
+  ],
+  "ETL": [
+    "etl",
+    "elt",
+    "data pipeline"
+  ],
+  "FastAPI": [
+    "fastapi"
+  ],
+  "GCP": [
+    "gcp",
+    "google cloud platform"
+  ],
+  "Git": [
+    "git",
+    "github",
+    "gitlab"
+  ],
+  "IT Support": [
+    "it support",
+    "service desk",
+    "helpdesk"
+  ],
+  "Java": [
+    "java"
+  ],
+  "JavaScript": [
+    "javascript",
+    "js"
+  ],
+  "Kafka": [
+    "kafka"
+  ],
+  "Kubernetes": [
+    "kubernetes",
+    "k8s"
+  ],
+  "Linux": [
+    "linux",
+    "ubuntu"
+  ],
+  "Machine Learning": [
+    "machine learning",
+    "scikit-learn"
+  ],
+  "Microsoft 365": [
+    "microsoft 365",
+    "office 365",
+    "m365"
+  ],
+  "Networking": [
+    "networking",
+    "tcp/ip",
+    "dns",
+    "dhcp"
+  ],
+  "Node.js": [
+    "node.js",
+    "nodejs"
+  ],
+  "Power BI": [
+    "power bi",
+    "powerbi"
+  ],
+  "Python": [
+    "python",
+    "python3",
+    "python programming"
+  ],
+  "REST APIs": [
+    "rest api",
+    "restful"
+  ],
+  "React": [
+    "react",
+    "reactjs"
+  ],
+  "SQL": [
+    "sql",
+    "postgresql",
+    "mysql",
+    "sql server"
+  ],
+  "Spark": [
+    "spark",
+    "pyspark"
+  ],
+  "Tableau": [
+    "tableau"
+  ],
+  "Terraform": [
+    "terraform",
+    "infrastructure as code"
+  ],
+  "TypeScript": [
+    "typescript"
+  ]
+}
