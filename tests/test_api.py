@@ -1,5 +1,6 @@
 from fastapi.testclient import TestClient
 from backend.app.main import app
+from backend.app.demo_data import build_demo_jobs
 
 client = TestClient(app)
 
@@ -31,3 +32,13 @@ def test_skills_endpoint_contains_core_dictionary():
     assert "Python" in skills
     assert "SQL" in skills
     assert "AWS" in skills
+
+
+def test_demo_job_titles_and_levels_are_consistent():
+    jobs = build_demo_jobs()
+    assert not any("Graduate Graduate" in job["title"] for job in jobs)
+    assert all(
+        job["experience_level"] == "Graduate"
+        for job in jobs
+        if job["title"].startswith("Graduate ")
+    )

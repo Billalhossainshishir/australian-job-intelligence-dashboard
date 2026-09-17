@@ -3,9 +3,9 @@ from datetime import date, timedelta
 CITIES = [("Hobart","TAS"),("Launceston","TAS"),("Melbourne","VIC"),("Sydney","NSW"),("Brisbane","QLD"),("Perth","WA"),("Adelaide","SA"),("Canberra","ACT"),("Newcastle","NSW"),("Geelong","VIC")]
 ROLES = [
 ("Data Analyst","Data & Analytics",["SQL","Python","Power BI","Git"]),
-("Graduate Data Engineer","Data Engineering",["Python","SQL","ETL","AWS","Docker","Git"]),
+("Data Engineer","Data Engineering",["Python","SQL","ETL","AWS","Docker","Git"]),
 ("Machine Learning Engineer","AI & ML",["Python","Machine Learning","SQL","Docker","AWS","Git"]),
-("AI Graduate","AI & ML",["Python","Artificial Intelligence","Machine Learning","REST APIs","Git"]),
+("AI Engineer","AI & ML",["Python","Artificial Intelligence","Machine Learning","REST APIs","Git"]),
 ("Software Developer","Software Engineering",["JavaScript","TypeScript","React","Node.js","REST APIs","Git"]),
 ("Backend Developer","Software Engineering",["Python","FastAPI","SQL","Docker","REST APIs","Git"]),
 ("Cloud Engineer","Cloud & DevOps",["AWS","Azure","Docker","Kubernetes","Terraform","CI/CD","Linux","Git"]),
