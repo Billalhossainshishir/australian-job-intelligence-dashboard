@@ -1,6 +1,8 @@
 # Australian Job Intelligence Dashboard
 
-A recruiter-facing portfolio project that analyses curated Australian technology-job data, normalises technical skills, visualises market demand and compares a CV's tracked technical skills with a selected job description.
+A dashboard for exploring a generated sample of Australian technology roles and comparing the technical skills in a CV with a role description. The browser dashboard and Python API implement separate demonstrations using synthetic data, not current vacancies.
+
+Read the [reviewer guide](docs/REVIEWER_GUIDE.md) for execution modes, reproducible setup, architecture, verification steps and known limitations.
 
 > **Public-demo honesty:** the GitHub Pages site uses curated sample data and browser-side analytics because GitHub Pages cannot run FastAPI/PostgreSQL. The complete backend implementation is included in this repository. The sample records are not live vacancies.
 
@@ -8,7 +10,7 @@ A recruiter-facing portfolio project that analyses curated Australian technology
 
 **Open dashboard → filter jobs → explore skill demand → select a job → load/paste a CV → compare technical skills**
 
-The project follows the portfolio roadmap requirement to use the term **Technical Skill Coverage / Skill Match**, not a probability of getting hired.
+**Technical Skill Coverage** describes dictionary-based skill overlap, not a probability of getting hired.
 
 ## What it demonstrates
 
@@ -65,7 +67,7 @@ australian-job-intelligence-dashboard/
 
 FastAPI also exposes interactive API documentation at `/docs` when the backend is running.
 
-## Run the complete stack with Docker
+## Run the API database and static frontend with Docker
 
 ```bash
 docker compose up --build
@@ -77,7 +79,7 @@ Then open:
 - API: `http://localhost:8000`
 - API docs: `http://localhost:8000/docs`
 
-The API container seeds PostgreSQL automatically from the curated demo dataset.
+The API container seeds PostgreSQL automatically from generated demonstration records. The served frontend still uses its own JavaScript data; it is not connected to this API. Inspect the backend through `/docs`.
 
 ## Run without Docker
 

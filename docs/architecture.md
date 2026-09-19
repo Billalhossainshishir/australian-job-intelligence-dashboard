@@ -20,3 +20,9 @@ The repository contains FastAPI, SQLAlchemy and PostgreSQL. `docker compose up -
 ## GitHub Pages path
 
 GitHub Pages is static hosting, so the public recruiter demo generates the same reproducible sample market in browser JavaScript. The page clearly labels the records as portfolio demo data and does not claim the Python backend is running on GitHub Pages.
+
+
+
+## Current execution boundary
+
+The current frontend does not call the API, including when served by Docker. Browser-generated data and comparison remain separate from Python/database results. The two paths in the diagram are independent, not an integrated full-stack user journey. See [the reviewer guide](REVIEWER_GUIDE.md).
