@@ -21,6 +21,11 @@ Read the [reviewer guide](docs/REVIEWER_GUIDE.md) for execution modes, reproduci
 
 > **Public-demo honesty:** the GitHub Pages site uses curated sample data and browser-side analytics because GitHub Pages cannot run FastAPI/PostgreSQL. The complete backend implementation is included in this repository. The sample records are not live vacancies.
 
+
+## Project preview
+
+![Australian Job Intelligence Dashboard live demo overview](screenshots/job-intelligence-overview.jpg)
+
 ## Live demo flow
 
 **Open dashboard → filter jobs → explore skill demand → select a job → load/paste a CV → compare technical skills**
