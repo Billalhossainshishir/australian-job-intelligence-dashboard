@@ -1,8 +1,23 @@
 # Australian Job Intelligence Dashboard
 
+[![Tests](https://github.com/Billalhossainshishir/australian-job-intelligence-dashboard/actions/workflows/tests.yml/badge.svg)](https://github.com/Billalhossainshishir/australian-job-intelligence-dashboard/actions/workflows/tests.yml)
+[![GitHub Pages](https://github.com/Billalhossainshishir/australian-job-intelligence-dashboard/actions/workflows/pages.yml/badge.svg)](https://github.com/Billalhossainshishir/australian-job-intelligence-dashboard/actions/workflows/pages.yml)
+
 A dashboard for exploring a generated sample of Australian technology roles and comparing the technical skills in a CV with a role description. The browser dashboard and Python API implement separate demonstrations using synthetic data, not current vacancies.
 
 Read the [reviewer guide](docs/REVIEWER_GUIDE.md) for execution modes, reproducible setup, architecture, verification steps and known limitations.
+
+## Quick recruiter view
+
+| Explore | Link |
+| --- | --- |
+| **Live demo** | https://billalhossainshishir.github.io/australian-job-intelligence-dashboard/ |
+| **Reviewer guide** | [docs/REVIEWER_GUIDE.md](docs/REVIEWER_GUIDE.md) |
+| **Architecture** | [docs/architecture.md](docs/architecture.md) |
+| **Case study** | [docs/case-study.md](docs/case-study.md) |
+| **Data notes** | [docs/data-notes.md](docs/data-notes.md) |
+
+**60-second demo:** Filter technology roles → inspect skill demand → select a role → load/paste a CV → review transparent technical-skill coverage.
 
 > **Public-demo honesty:** the GitHub Pages site uses curated sample data and browser-side analytics because GitHub Pages cannot run FastAPI/PostgreSQL. The complete backend implementation is included in this repository. The sample records are not live vacancies.
 
@@ -146,3 +161,11 @@ The repository ships with 240 curated demo records so the project is reproducibl
 
 **Billal Hossain Shishir**  
 Portfolio: `https://billalhossain.com.au`
+
+## Limitations and scope
+
+- The repository ships with curated synthetic demonstration records, not current Australian vacancies.
+- Technical Skill Coverage is deterministic dictionary-based overlap; it is not an employability score, interview probability or hiring prediction.
+- The GitHub Pages dashboard uses browser-side sample data and is not connected to the FastAPI/PostgreSQL backend.
+- The current skill extractor is intentionally transparent and dictionary-based; it does not attempt semantic equivalence beyond configured normalisation.
+- Real-world ingestion should use public APIs, open datasets, licensed feeds or manually prepared data that permits reuse.
